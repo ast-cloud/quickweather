@@ -10,9 +10,10 @@ def index(request):
     url='http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=e09dd0b214c71258c57a8720e48712e8'
     if request.method=='POST':
         a=requests.get(url.format(request.POST.get('newcity')))
-        if a['cod']=="200":
+        print(a)
+        if a.status_code==200:
             City(name=request.POST.get('newcity'), dt=datetime.today()).save()
-            
+
     queryset=City.objects.all()
     allcitydata=[]
     for city in queryset:

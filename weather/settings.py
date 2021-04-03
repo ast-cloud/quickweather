@@ -26,7 +26,7 @@ SECRET_KEY = '7uslyuv!r+5h6hyy%=q%r8-qpb%dd=1zp2lc101whx!8yw5v+7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://quickweather248.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['quickweather248.herokuapp.com','127.0.0.1']
 
 
 # Application definition

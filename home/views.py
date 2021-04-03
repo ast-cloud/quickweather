@@ -20,7 +20,7 @@ def index(request):
         res=requests.get(url.format(city)).json()
         cityweather={
         'id':city.id,
-        'city':city.name,
+        'city':res['name'],
         'temp':res['main']['temp'],
         'desc':res['weather'][0]['description'],
         'icon':res['weather'][0]['icon']
